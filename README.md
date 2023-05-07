@@ -1,6 +1,6 @@
 # i18n Management
 
-前端平台管理與設定 i18n 語料庫，並於 webpack 打包時產生 json 檔
+前端平台管理與設定 i18n 語料庫，並可使用 i18n_management-cli getData 指令產生 locales json 檔
 
 ## 使用工具
 
@@ -37,17 +37,29 @@ Backend： Node.js、MongoDB、Docker
 ![image](https://github.com/e04ji3w94gj94/i18n_management/blob/main/screen_image/delete_dialog.png)
 ![image](https://github.com/e04ji3w94gj94/i18n_management/blob/main/screen_image/delete_example.png)
 
-### `打包 Frontend 程式`
+### `i18n_management-cli 設定`
 
-於 i18n_management_frontend 路徑中輸入 `npm run build` 指令 ( 需要先啟動 Backend Server )\
-即可於 i18n_management_frontend/src/assets/locales 路徑中，更新並產生 locales json 檔
+![image](https://github.com/e04ji3w94gj94/i18n_management/blob/main/screen_image/i18n_management-cli_help.png)
 
-#### `打包示意圖 `
+透過 `i18n_management-cli getData` 指令產生 json 檔\
+可選指令：
 
-![image](https://github.com/e04ji3w94gj94/i18n_management/blob/main/screen_image/build_before.png)
-![image](https://github.com/e04ji3w94gj94/i18n_management/blob/main/screen_image/build_after.png)
-![image](https://github.com/e04ji3w94gj94/i18n_management/blob/main/screen_image/build_file.png)
+- --url [string]: backend server url
+- -p, --port [string]: backend server port
+- --path [string]: store locales json path
+- --lng [string]: select locales language
 
-### `Config 設定`
+### `產生 locales json 檔示意圖 `
 
-![image](https://github.com/e04ji3w94gj94/i18n_management/blob/main/screen_image/config.png)
+### `install package`
+
+可透過 npm i i18n_management_frontend 來安裝至其他專案使用
+
+- Page component
+- i18n_management-cli getData 指令
+
+[npm package 網址](https://www.npmjs.com/package/i18n_management_frontend)
+
+#### `使用示意圖 `
+
+![image](https://github.com/e04ji3w94gj94/i18n_management/blob/main/screen_image/import_component.png)
