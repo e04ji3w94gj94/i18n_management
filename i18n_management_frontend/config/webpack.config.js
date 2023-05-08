@@ -218,7 +218,7 @@ module.exports = function (webpackEnv) {
         ? (info) => path.relative(paths.appSrc, info.absoluteResourcePath).replace(/\\/g, '/')
         : isEnvDevelopment
           && ((info) => path.resolve(info.absoluteResourcePath).replace(/\\/g, '/')),
-      libraryTarget: isEnvProduction ? 'module' : 'commonjs',
+      libraryTarget: isEnvProduction ? 'module' : '',
     },
     externals: isEnvProduction
       ? {

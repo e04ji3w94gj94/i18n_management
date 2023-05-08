@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Box, Button } from '@mui/material';
@@ -28,8 +29,9 @@ function Main() {
       }}
     >
       <Box sx={{ padding: 5, background: '#caf2fc' }}>
-        {buttonLng.map((info) => (
+        {buttonLng.map((info, idx) => (
           <Button
+            key={idx}
             sx={{ margin: 1 }}
             variant={`${selectLng === info.lng ? 'contained' : 'outlined'}`}
             onClick={() => changeLanguage(info.lng)}
